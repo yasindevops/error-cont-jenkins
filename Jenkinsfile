@@ -108,7 +108,7 @@ pipeline{
                 echo 'Pushing App Image to DockerHub Repo'
                 withCredentials([string(credentialsId: 'my-dockerhub-token', variable: 'DOCKERHUB_TOKEN')]) {
                 sh 'docker login -u $DOCKERHUB_USER -p $DOCKERHUB_TOKEN'
-                sh 'docker push "IMAGE_NAME"'
+                sh 'docker push "$IMAGE_NAME"'
                 
             }
           }
