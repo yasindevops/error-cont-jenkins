@@ -1,8 +1,8 @@
 pipeline{
     agent any 
     tools {
-        jdk 'Java17'
-        maven 'Maven3'
+        jdk 'Java21'
+        maven 'Maven'
     }
     environment {
         APP_NAME = "complete-pipeline"
